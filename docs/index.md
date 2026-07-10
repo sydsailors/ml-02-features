@@ -21,19 +21,54 @@ to get the example projects running on your machine.
 
 ## Phase 4. Technical Modification
 
-Describe your small technical modification to the example project.
+Phase 4 modifications included:
 
-Include:
+- Copying `app_case.py` and renaming it `app_sailors.py`
+- Saving each chart to the data/raw folder using `plt.savefig()`
+- Log where the plots were saved to using `LOG.info()`
 
-- What you changed
-- Why you chose that change
-- How you verified that it worked
-- What result, output, chart, metric, or behavior confirmed the change
+These changes were verified by running the app in the terminal. The plots were
+saved to the data/raw folder.
 
-Compared with the example project,
-explain what is different and why the change matters.
+Output of modification:
+```shell
+| INFO | ML | Predicted score: 83.4
+| INFO | ML | Create charts.............
+| INFO | ML | Creating chart: hours studied vs score
+| INFO | ML | Saved plot: hours_vs_score.png
+| INFO | ML | Creating chart: model coefficients
+| INFO | ML | Got a figure Figure(1800x1000) and axes Axes(0.125,0.11;0.775x0.77) from plt.subplots().
+| INFO | ML | Saved plot: model_coefficients.png
+| INFO | ML | Summarize workflow........
+| INFO | ML | ========================
+| INFO | ML | SUMMARY
+| INFO | ML | ========================
+| INFO | ML | Dataset: hours_scores_case
+| INFO | ML | Original rows: 10
+| INFO | ML | Clean rows: 10
+| INFO | ML | Features: ['hours_studied', 'practice_quizzes', 'attendance_pct', 'sleep_hours', 'prior_score']
+| INFO | ML | Target: score
+| INFO | ML | ----- in a script, call plt.show() once at the end to display all charts -----
+| INFO | ML | ----- in a script, CLOSE the chart windows with the close button to CONTINUE -----
+| INFO | ML | Workflow complete
+| INFO | ML | IMPORTANT: This script creates chart windows.
+| INFO | ML | Close chart windows and terminate this process with CTRL+c as needed.
+| INFO | ML | ========================
+| INFO | ML | Executed successfully!
+| INFO | ML | ========================
+```
 
-Was it easy, or surprisingly challenging and why do you think so?
+Two easy enhancements were made in this phase. Compared to the example project, I enhanced
+the visualization step to automatically save each chart as a PNG file using `plt.savefig()`.
+This creates permanent image files that could be included in reports or presentations without
+having to recreate the plots. The addition of log messages confirms that each chart was
+successfully saved, making the workflow easier to verify and debug.
+
+
+To run Phase 4:
+```shell
+uv run python -m mlstudio.app_sailors
+```
 
 ## Phase 5. Custom Project
 
