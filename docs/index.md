@@ -79,12 +79,13 @@ diamond's `price` based on characteristics such as carat, cut, color, clarity, d
 table, and physical dimensions.
 
 This project is a supervised machine learning regression problem because the target is
-a numeric target variable. I updated ny notebook to use the `diamonds` dataset, selected
+a numeric target variable. I updated my notebook to use the `diamonds` dataset, selected
 `price` as the target variable, and constructed features from existing columns.
 The constructed features consist of:
 - `table_depth_ratio`: `table` / `depth`
 - `volume_est`: `x` * `y` * `z`
 - `carat_class`: a category from carat
+
 These features provide the model with additional information that may
 improve predictions.
 
@@ -122,7 +123,7 @@ The project remained a supervised regression model since `price` is a continuous
 
 ### Features
 
-The example features from the Penguins database includes:
+The example features from the Penguins database include:
 - `species`
 - `island`
 - `bill_length_mm`
@@ -131,19 +132,19 @@ The example features from the Penguins database includes:
 - `body_mass_g`
 - `sex`
 
-The features from the Diamonds database includes:
+The features from the Diamonds database include:
 - `carat`
 - `cut`
 - `color`
 - `clarity`
 - `depth`
 - `table`
-- `price`
+- `price` (target)
 - `x`
 - `y`
 - `z`
 
-I created engineered features such as estimated diamond volume and carat size catagory to
+I created engineered features such as estimated diamond volume and carat size category to
 provide additional information for the model.
 
 ### Evaluation and Results
@@ -151,7 +152,7 @@ provide additional information for the model.
 I evaluated the dataset by assessing data quality and constructing new
 features. I loaded the Seaborn Diamonds dataset and verified that all
 53,940 records were complete. There were no missing values. This makes
-the dataset well suited for maching learning.
+the dataset well suited for machine learning.
 
 The creation of the new features increases the number of available predictors
 from 10 to 13. This could help a future regression model better capture relationships between a diamond's physical characteristics and its price.
@@ -171,5 +172,5 @@ assessed summary statistics. I then engineered three new features
 information that could improve future model predictions while avoiding
 target leakage.
 
-This project helped my understanding of the early stages of the maching learning
+This project helped strengthen my understanding of the early stages of the maching learning
 workflow. These skills are applicable to many real world problems such as estimating home prices and vehicle values.
