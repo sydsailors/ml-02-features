@@ -73,8 +73,8 @@ uv run python -m mlstudio.app_sailors
 ## Phase 5. Custom Project
 
 For my custom project, I copied the example notebook `ml_02_case.ipynb` and renamed
-it `ml_02_sailorsp5.ipynb`. I modified this notebook to analyze the `diamonds` dataset
-instead of the `penguins` dataset. The goal of this custom project is to predict a
+it `ml_02_sailorsp5.ipynb`. I modified this notebook to analyze the Diamonds dataset
+instead of the Penguins dataset. The goal of this custom project is to predict a
 diamond's `price` based on characteristics such as carat, cut, color, clarity, depth,
 table, and physical dimensions.
 
@@ -87,6 +87,10 @@ The constructed features consist of:
 - `carat_class`: a category from carat
 These features provide the model with additional information that may
 improve predictions.
+
+To run Phase 5: open the notebook, click on the `select Kernel` name in
+the top-right corner of the notebook interface, choose Python Environments
+and click on the recommended local .venv/ from the drop-down menu, and then click on `Run All` to run all of the cells.
 
 ### Basis and Data
 
@@ -118,33 +122,54 @@ The project remained a supervised regression model since `price` is a continuous
 
 ### Features
 
-Describe the example features.
+The example features from the Penguins database includes:
+- `species`
+- `island`
+- `bill_length_mm`
+- `bill_depth_mm`
+- `flipper_length_mm`
+- `body_mass_g`
+- `sex`
 
-Then describe the features you used to predict your target.
+The features from the Diamonds database includes:
+- `carat`
+- `cut`
+- `color`
+- `clarity`
+- `depth`
+- `table`
+- `price`
+- `x`
+- `y`
+- `z`
 
-Explain what you changed, added, removed, or kept and why.
+I created engineered features such as estimated diamond volume and carat size catagory to
+provide additional information for the model.
 
 ### Evaluation and Results
 
-Describe how you evaluated your model.
+I evaluated the dataset by assessing data quality and constructing new
+features. I loaded the Seaborn Diamonds dataset and verified that all
+53,940 records were complete. There were no missing values. This makes
+the dataset well suited for maching learning.
 
-Include:
+The creation of the new features increases the number of available predictors
+from 10 to 13. This could help a future regression model better capture relationships between a diamond's physical characteristics and its price.
 
-- The metric or evidence you used
-- The main result
-- Whether the result was useful, interesting, surprising, or disappointing
-- Any weakness, limitation, or next improvement
+One limitation is that feature usefulness has not been validated through
+model training yet. The next step would be to fit a regression model
+and evaluate if the engineered features improve prediction accuracy.
 
 ### Summary
 
-Summarize your custom project.
+For my custom project, I modified the example notebook to analyze the
+Seaborn Diamonds dataset. The intended target was chosen to be `price`
+because it is a continuous numeric value. This makes the model a
+supervised regression problem. The dataset was checked for completeness and
+assessed summary statistics. I then engineered three new features
+(`table_depth_ratio`, `volume_est`, and `carat_class`) to provide additional
+information that could improve future model predictions while avoiding
+target leakage.
 
-Include:
-
-- How you implemented your custom model
-- What results you got
-- What you learned
-- How well you exercised the skills covered in this project
-- What kinds of real problems you could apply these skills to in the future
-
-Display at least one image or screenshot showing your work.
+This project helped my understanding of the early stages of the maching learning
+workflow. These skills are applicable to many real world problems such as estimating home prices and vehicle values.
