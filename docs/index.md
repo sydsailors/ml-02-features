@@ -72,37 +72,49 @@ uv run python -m mlstudio.app_sailors
 
 ## Phase 5. Custom Project
 
-Describe your custom project and how you made your modeling decisions.
+For my custom project, I copied the example notebook `ml_02_case.ipynb` and renamed
+it `ml_02_sailorsp5.ipynb`. I modified this notebook to analyze the `diamonds` dataset
+instead of the `penguins` dataset. The goal of this custom project is to predict a
+diamond's `price` based on characteristics such as carat, cut, color, clarity, depth,
+table, and physical dimensions.
 
-Be specific about what changed from the example project.
+This project is a supervised machine learning regression problem because the target is
+a numeric target variable. I updated ny notebook to use the `diamonds` dataset, selected
+`price` as the target variable, and constructed features from existing columns.
+The constructed features consist of:
+- `table_depth_ratio`: `table` / `depth`
+- `volume_est`: `x` * `y` * `z`
+- `carat_class`: a category from carat
+These features provide the model with additional information that may
+improve predictions.
 
 ### Basis and Data
 
-Describe the dataset, input, or example you started with.
+The example project in `notebooks/ml_02_case.ipynb` had an intended target `body_mass_g` from the Seaborn Penguins dataset.
+I used the workflow and applied it to the Seaborn Diamonds dataset. I chose this dataset
+because it contains a numeric target variable that is well suited for a regression model.
+The dataset also includes multiple features that are known to influence a diamond's value.
 
-Include:
-
-- The original example dataset or input
-- The data source
-- Why you chose it, kept it, or changed it
-- Any important limitations or assumptions
+One limitation of the dataset is that the model can only learn from
+the variables provided. Other factors such as brand, regional pricing,
+certification, or market demand are not included. This means predicted prices
+may not capture real-world influences on a diamond's value.
 
 ### Modeling Approach
 
-Describe the problem type and modeling approach for this project.
+This project is a supervised machine learning regression problem because the chosen target is
+a numeric variable, `price`.
 
-Include:
-
-- Is this supervised or unsupervised and how do you know
-- Is this classification, regression, clustering, recommendation, forecasting, or another type of ML task
-- What kind of target works well for this approach
-- Why your selected model or method is appropriate
+A numeric target variable works well for this approach because
+the model can learn relationships between features such as carat, cut,
+color, clarity, depth, table, and physical dimensions.
 
 ### Target
 
-Describe the example target variable.
+The example target variable, `body_mass_g`, represents the weight of the penguin.
+The target variable, `price`, represents the selling price of a diamond.
 
-Then describe your chosen target variable.
+The project remained a supervised regression model since `price` is a continuous numeric value.
 
 Explain how your target choice changes the modeling approach, interpretation, or evaluation.
 
