@@ -185,11 +185,15 @@ Remove unnecessary instructional comments in your custom files.
 
 Update figures to present interesting results from your custom project:
 
-![Provide a Useful Caption](./docs/images/Figure_1.png)
+![hours_vs_score.png](/data/raw/hours_vs_score.png)
 
-![Provide a Useful Caption](./docs/images/Figure_2.png)
+![model_coefficients.png](/data/raw/model_coefficients.png)
 
 ## Project Documentation
+
+Phase 5 Notebook
+
+[notebooks/ml_02_sailors.ipynb](notebooks/ml_02_sailors.ipynb)
 
 Additional project instructions, terms, and notes:
 

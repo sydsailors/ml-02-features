@@ -64,6 +64,8 @@ This creates permanent image files that could be included in reports or presenta
 having to recreate the plots. The addition of log messages confirms that each chart was
 successfully saved, making the workflow easier to verify and debug.
 
+Hours vs Score
+![hours_vs_score.png](/data/raw/hours_vs_score.png)
 
 To run Phase 4:
 ```shell
