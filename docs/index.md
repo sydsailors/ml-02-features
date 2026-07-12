@@ -172,5 +172,5 @@ assessed summary statistics. I then engineered three new features
 information that could improve future model predictions while avoiding
 target leakage.
 
-This project helped strengthen my understanding of the early stages of the maching learning
+This project helped strengthen my understanding of the early stages of the machine learning
 workflow. These skills are applicable to many real world problems such as estimating home prices and vehicle values.
