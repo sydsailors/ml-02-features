@@ -116,8 +116,6 @@ The target variable, `price`, represents the selling price of a diamond.
 
 The project remained a supervised regression model since `price` is a continuous numeric value.
 
-Explain how your target choice changes the modeling approach, interpretation, or evaluation.
-
 ### Features
 
 Describe the example features.
