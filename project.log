@@ -255,3 +255,121 @@ dtype: int64
 2026-07-10 16:03:37 | INFO | ML | ========================
 2026-07-10 16:03:37 | INFO | ML | Executed successfully!
 2026-07-10 16:03:37 | INFO | ML | ========================
+2026-07-12 13:40:08 | INFO | M02 | === RUN START ===
+2026-07-12 13:40:08 | INFO | M02 | project=M02
+2026-07-12 13:40:08 | INFO | M02 | repo_dir=ml-02-features
+2026-07-12 13:40:08 | INFO | M02 | python=3.14.5
+2026-07-12 13:40:08 | INFO | M02 | os=Darwin 20.6.0
+2026-07-12 13:40:08 | INFO | M02 | shell=zsh
+2026-07-12 13:40:08 | INFO | M02 | cwd=notebooks
+2026-07-12 13:40:08 | INFO | M02 | github_actions=False
+2026-07-12 13:40:08 | INFO | M02 | Confirming installation:
+2026-07-12 13:40:08 | INFO | M02 |   python:       3.14.5
+2026-07-12 13:40:08 | INFO | M02 |   pandas:       3.0.3
+2026-07-12 13:40:08 | INFO | M02 |   numpy:        2.5.1
+2026-07-12 13:40:08 | INFO | M02 |   scikit-learn: 1.9.0
+2026-07-12 13:40:08 | INFO | M02 |   seaborn:      0.13.2
+2026-07-12 13:40:08 | INFO | M02 |   matplotlib:   3.11.0
+2026-07-12 13:40:12 | INFO | M02 | Loading dataset: diamonds
+2026-07-12 13:40:13 | INFO | M02 | Loaded: 53940 rows (instances), 10 columns
+2026-07-12 13:40:16 | INFO | M02 | The intended target is 'price'.
+2026-07-12 13:40:16 | INFO | M02 | Any feature derived FROM the target would leak the answer. Avoid those.
+2026-07-12 13:40:16 | INFO | M02 | Per-column completeness and type:
+2026-07-12 13:40:16 | INFO | M02 |   carat                float64    present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 |   cut                  category   present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 |   color                category   present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 |   clarity              category   present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 |   depth                float64    present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 |   table                float64    present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 |   price                int64      present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 |   x                    float64    present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 |   y                    float64    present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 |   z                    float64    present=100.0%  missing=0
+2026-07-12 13:40:16 | INFO | M02 | Numeric summary (for spread / outliers):
+2026-07-12 13:40:16 | DEBUG | M02 | 
+              carat         depth         table         price             x             y             z
+count  53940.000000  53940.000000  53940.000000  53940.000000  53940.000000  53940.000000  53940.000000
+mean       0.797940     61.749405     57.457184   3932.799722      5.731157      5.734526      3.538734
+std        0.474011      1.432621      2.234491   3989.439738      1.121761      1.142135      0.705699
+min        0.200000     43.000000     43.000000    326.000000      0.000000      0.000000      0.000000
+25%        0.400000     61.000000     56.000000    950.000000      4.710000      4.720000      2.910000
+50%        0.700000     61.800000     57.000000   2401.000000      5.700000      5.710000      3.530000
+75%        1.040000     62.500000     59.000000   5324.250000      6.540000      6.540000      4.040000
+max        5.010000     79.000000     95.000000  18823.000000     10.740000     58.900000     31.800000
+2026-07-12 13:40:24 | INFO | M02 | Constructing features (vectorized, none are derived from the target)
+2026-07-12 13:40:24 | INFO | M02 | Added features: ['table_depth_ratio', 'volume_est', 'carat_class']
+2026-07-12 13:40:24 | DEBUG | M02 | Sample of constructed features:
+2026-07-12 13:40:24 | DEBUG | M02 | 
+   carat  table_depth_ratio  volume_est carat_class
+0   0.23           0.894309   38.202030       small
+1   0.21           1.020067   34.505856       small
+2   0.23           1.142355   38.076885       small
+3   0.29           0.929487   46.724580       small
+4   0.31           0.916272   51.917250       small
+2026-07-12 13:48:21 | INFO | M02 | ========================
+2026-07-12 13:48:21 | INFO | M02 | SUMMARY
+2026-07-12 13:48:21 | INFO | M02 | ========================
+2026-07-12 13:48:21 | INFO | M02 | Dataset:          diamonds
+2026-07-12 13:48:21 | INFO | M02 | Original columns: 10
+2026-07-12 13:48:21 | INFO | M02 | After features:   13
+2026-07-12 13:48:21 | INFO | M02 | Intended target:  price
+2026-07-12 13:48:21 | INFO | M02 | ========================
+2026-07-12 13:53:08 | INFO | M02 | === RUN START ===
+2026-07-12 13:53:08 | INFO | M02 | project=M02
+2026-07-12 13:53:08 | INFO | M02 | repo_dir=ml-02-features
+2026-07-12 13:53:08 | INFO | M02 | python=3.14.5
+2026-07-12 13:53:08 | INFO | M02 | os=Darwin 20.6.0
+2026-07-12 13:53:08 | INFO | M02 | shell=zsh
+2026-07-12 13:53:08 | INFO | M02 | cwd=notebooks
+2026-07-12 13:53:08 | INFO | M02 | github_actions=False
+2026-07-12 13:53:08 | INFO | M02 | Confirming installation:
+2026-07-12 13:53:08 | INFO | M02 |   python:       3.14.5
+2026-07-12 13:53:08 | INFO | M02 |   pandas:       3.0.3
+2026-07-12 13:53:08 | INFO | M02 |   numpy:        2.5.1
+2026-07-12 13:53:08 | INFO | M02 |   scikit-learn: 1.9.0
+2026-07-12 13:53:08 | INFO | M02 |   seaborn:      0.13.2
+2026-07-12 13:53:08 | INFO | M02 |   matplotlib:   3.11.0
+2026-07-12 13:53:08 | INFO | M02 | Loading dataset: diamonds
+2026-07-12 13:53:08 | INFO | M02 | Loaded: 53940 rows (instances), 10 columns
+2026-07-12 13:53:08 | INFO | M02 | The intended target is 'price'.
+2026-07-12 13:53:08 | INFO | M02 | Any feature derived FROM the target would leak the answer. Avoid those.
+2026-07-12 13:53:08 | INFO | M02 | Per-column completeness and type:
+2026-07-12 13:53:08 | INFO | M02 |   carat                float64    present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 |   cut                  category   present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 |   color                category   present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 |   clarity              category   present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 |   depth                float64    present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 |   table                float64    present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 |   price                int64      present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 |   x                    float64    present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 |   y                    float64    present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 |   z                    float64    present=100.0%  missing=0
+2026-07-12 13:53:08 | INFO | M02 | Numeric summary (for spread / outliers):
+2026-07-12 13:53:08 | DEBUG | M02 | 
+              carat         depth         table         price             x             y             z
+count  53940.000000  53940.000000  53940.000000  53940.000000  53940.000000  53940.000000  53940.000000
+mean       0.797940     61.749405     57.457184   3932.799722      5.731157      5.734526      3.538734
+std        0.474011      1.432621      2.234491   3989.439738      1.121761      1.142135      0.705699
+min        0.200000     43.000000     43.000000    326.000000      0.000000      0.000000      0.000000
+25%        0.400000     61.000000     56.000000    950.000000      4.710000      4.720000      2.910000
+50%        0.700000     61.800000     57.000000   2401.000000      5.700000      5.710000      3.530000
+75%        1.040000     62.500000     59.000000   5324.250000      6.540000      6.540000      4.040000
+max        5.010000     79.000000     95.000000  18823.000000     10.740000     58.900000     31.800000
+2026-07-12 13:53:08 | INFO | M02 | Constructing features (vectorized, none are derived from the target)
+2026-07-12 13:53:08 | INFO | M02 | Added features: ['table_depth_ratio', 'volume_est', 'carat_class']
+2026-07-12 13:53:08 | DEBUG | M02 | Sample of constructed features:
+2026-07-12 13:53:08 | DEBUG | M02 | 
+   carat  table_depth_ratio  volume_est carat_class
+0   0.23           0.894309   38.202030       small
+1   0.21           1.020067   34.505856       small
+2   0.23           1.142355   38.076885       small
+3   0.29           0.929487   46.724580       small
+4   0.31           0.916272   51.917250       small
+2026-07-12 13:53:09 | INFO | M02 | ========================
+2026-07-12 13:53:09 | INFO | M02 | SUMMARY
+2026-07-12 13:53:09 | INFO | M02 | ========================
+2026-07-12 13:53:09 | INFO | M02 | Dataset:          diamonds
+2026-07-12 13:53:09 | INFO | M02 | Original columns: 10
+2026-07-12 13:53:09 | INFO | M02 | After features:   13
+2026-07-12 13:53:09 | INFO | M02 | Intended target:  price
+2026-07-12 13:53:09 | INFO | M02 | ========================
