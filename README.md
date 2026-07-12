@@ -76,6 +76,11 @@ A new file `project.log` will appear in the root project folder.
 
 ## Command Reference
 
+To run Phase 4:
+```shell
+uv run python -m mlstudio.app_sailors
+```
+
 <details>
 <summary>Show command reference</summary>
 
